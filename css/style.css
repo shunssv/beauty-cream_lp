@@ -1,0 +1,384 @@
+@charset "utf-8";
+
+html {
+    font-size: 62.5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    scroll-padding-top: 65px;
+}
+
+body {
+    font-size: 1.6rem;
+    color: #4e4e4e;
+    line-height: 1.8;
+}
+
+img {
+    max-width: 100%;
+}
+
+.br_sp {
+    display: none;
+}
+
+header nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+header nav ul {
+    display: flex;
+    column-gap: 60px;
+}
+
+header nav ul a {
+    font-size: 2.0rem;
+    display: block;
+    color: #4e4e4e;
+    line-height: 60px;
+}
+
+header nav ul img {
+    width: 30px;
+    vertical-align: middle;
+    margin-right: 60px;
+}
+
+header nav ul a:hover {
+    opacity: 0.8;
+}
+
+#mv {
+    /* MV */
+    position: relative;
+    background-image: url(../images/mv.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    width: 100%;
+    padding-top: 54.2%;
+    box-sizing: border-box;
+    z-index: 1;
+    /* TEXT */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mv h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-50%);
+    
+    line-height: 1.5;
+    text-align: center;
+    font-weight: normal;
+
+    background: rgba(255,255,255,0.5);
+    padding: 40px;
+}
+
+#mv h1 span {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content_title {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.content_title_type2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin: 100px 0 50px;
+    text-align: center;
+}
+
+#camp_bnr {
+    margin-top: 100px;
+}
+
+#camp_bnr:hover {
+    opacity: 0.8;
+}
+
+#concept_txt p {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 100px;
+    line-height: 2;   
+}
+
+#concept_txt .product_pr {
+    font-size: 2.4rem;
+    line-height: 1.5;
+}
+
+#concept_txt .product_pr .number_pr {
+    font-size: 4.0rem;
+}
+
+#product {
+    display: flex;
+    margin-top: 100px;
+}
+
+#product img {
+    height: fit-content;
+}
+
+#product .product_detail {
+    margin-left: 40px;
+}
+
+#product .product_detail .product_name {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.tax_included {
+    font-size: 1.2rem;
+}
+
+
+#product .product_detail .product_icon {
+    display: flex;
+}
+
+#product .product_detail .product_icon li {
+    font-size: 1.2rem;
+    border: solid #4e4e4e 1px;
+    padding: 8px 20px;
+    margin-right: 10px;
+}
+
+.purchase_btn {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.purchase_btn a {
+    display: block;
+    font-size: 2.0rem;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    background: #be6c7a;
+    padding: 15px 0;
+    border-radius: 25px;
+    line-height: 1;
+}
+
+#product .purchase_btn a:hover {
+    opacity: 0.8;
+}
+
+#product .product_detail h2,ul,.product_txt {
+    margin-bottom: 30px;
+}
+
+#product_components p {
+    border: dashed #4e4e4e 1px;
+    width: 700px;
+    margin: 30px auto 0;
+    padding: 30px;
+}
+
+#instruction .three_steps {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#instruction .three_steps li {
+    width: 31.2%;
+    margin-top: 15px;
+}
+
+#voice .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#voice .container .inner {
+    display: flex;
+    align-items: center;
+    width: 48%;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    border: solid #be6c7a4d 1px;
+    padding: 20px;
+}
+
+#voice .container .inner p span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#voice .container .inner p span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#voice .container .inner img {
+    margin-left: 10px;
+    width: 114px;
+    height: 132px;
+}
+
+#faq dl {
+    margin-bottom: 40px;
+}
+
+#faq dl dt {
+    background: #be6c7ac4;
+    color: #ffffff;
+    padding: 10px 10px 10px 50px;
+}
+
+#faq dl dd {
+    padding: 10px 10px 10px 50px;
+}
+
+#faq dl dt::before,dd::before {
+    font-size: 2.4rem;
+    margin-right: 10px;
+}
+
+#faq dl dt::before {
+    content: "Q";
+    font-weight: bold;
+    display: inline-block;
+    width: 25px;
+    margin-left: -40px;
+}
+
+#faq dl dd::before {
+    content: "A";
+    font-weight: bold;
+    display: inline-block;
+    width: 25px;
+    margin-left: -40px;
+}
+
+#footer {
+    margin-top: 200px;
+    background: #9e2c41;
+    height: 100%;
+    text-align: center;
+}
+
+#footer .f_logo img {
+    width: 200px;
+}
+
+#footer small {
+    font-size: 1.0rem;
+    color: #ffffff;
+    display: inline-block;
+    margin-top: 100px;
+}
+
+
+
+@media screen and (max-width: 760px) {
+    .br_sp {
+        display: inline;
+    }
+    
+    header nav ul {
+        column-gap: 22px;
+    }
+
+    header nav ul img {
+        margin-right: 22px;
+    }
+
+    #mv h1 {
+        left: 0;
+        top: 65%;
+        transform: none;
+        
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5% 8%;
+
+    }
+
+    #mv h1 span {
+        font-size: 2.0rem;
+    }
+
+    .wrapper {
+        width: 100%;
+        max-width: 760px; 
+        box-sizing: border-box;
+        padding: 0 3%;
+    }
+
+    #camp_bnr {
+        margin-top: 60px;
+    }
+
+    #concept_txt p {
+        margin-top: 60px;
+    }
+
+    #product {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    #product .product_detail {
+        margin: 25px;
+    }
+
+    #product .product_detail h2 {
+        text-align: center;
+    }
+
+    #product_components p {
+        width: auto;
+    }
+
+    #instruction .three_steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #instruction .three_steps li {
+        width: 100%;
+        max-width: 312px;
+    }
+
+    #instruction .three_steps img {
+        width: 70%;
+    }
+
+    #voice .container {
+        flex-direction: column;
+    }
+
+    #voice .container .inner {
+        width: 100%;
+    }
+
+    .content_title_type2 {
+        margin-top: 60px;
+    }
+}
+
+
