@@ -2,24 +2,31 @@
 
 html {
     font-size: 62.5%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     scroll-padding-top: 65px;
+    scroll-behavior: smooth;
 }
 
 body {
     font-size: 1.6rem;
-    color: #4e4e4e;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 1.8;
+    color: #4e4e4e;
 }
 
 img {
     max-width: 100%;
+    vertical-align: bottom;
 }
 
-.br_sp {
-    display: none;
+a {
+    transition: opacity .5s;
 }
 
+a:hover {
+    opacity: .8;
+}
+
+/* header */
 header nav {
     position: fixed;
     top: 0;
@@ -45,10 +52,7 @@ header nav ul img {
     margin-right: 60px;
 }
 
-header nav ul a:hover {
-    opacity: 0.8;
-}
-
+/* main visual */
 #mv {
     /* MV */
     position: relative;
@@ -59,6 +63,7 @@ header nav ul a:hover {
     padding-top: 54.2%;
     box-sizing: border-box;
     z-index: 1;
+    
     /* TEXT */
     display: flex;
     flex-direction: column;
@@ -85,32 +90,52 @@ header nav ul a:hover {
     font-weight: bold;
 }
 
+/* for all contents */
 .wrapper {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.content_title {
+[class^="content_title"] {
     font-size: 2.4rem;
     font-weight: bold;
 }
 
 .content_title_type2 {
-    font-size: 2.4rem;
-    font-weight: bold;
     margin: 100px 0 50px;
     text-align: center;
 }
 
+.br_sp {
+    display: none;
+}
+
+.purchase_btn {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.purchase_btn a {
+    display: block;
+    font-size: 2.0rem;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    background: #be6c7a;
+    padding: 15px 0;
+    border-radius: 25px;
+    line-height: 1;
+}
+
+/* banner */
 #camp_bnr {
     margin-top: 100px;
 }
 
-#camp_bnr:hover {
-    opacity: 0.8;
-}
 
+/* concept text */
 #concept_txt p {
     font-size: 1.6rem;
     text-align: center;
@@ -127,6 +152,7 @@ header nav ul a:hover {
     font-size: 4.0rem;
 }
 
+/* product */
 #product {
     display: flex;
     margin-top: 100px;
@@ -149,7 +175,6 @@ header nav ul a:hover {
     font-size: 1.2rem;
 }
 
-
 #product .product_detail .product_icon {
     display: flex;
 }
@@ -161,27 +186,7 @@ header nav ul a:hover {
     margin-right: 10px;
 }
 
-.purchase_btn {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-}
 
-.purchase_btn a {
-    display: block;
-    font-size: 2.0rem;
-    width: 100%;
-    color: #ffffff;
-    text-align: center;
-    background: #be6c7a;
-    padding: 15px 0;
-    border-radius: 25px;
-    line-height: 1;
-}
-
-#product .purchase_btn a:hover {
-    opacity: 0.8;
-}
 
 #product .product_detail h2,ul,.product_txt {
     margin-bottom: 30px;
@@ -194,6 +199,7 @@ header nav ul a:hover {
     padding: 30px;
 }
 
+/* instruction */
 #instruction .three_steps {
     display: flex;
     justify-content: space-between;
@@ -205,6 +211,7 @@ header nav ul a:hover {
     margin-top: 15px;
 }
 
+/* voice */
 #voice .container {
     display: flex;
     flex-wrap: wrap;
@@ -239,6 +246,7 @@ header nav ul a:hover {
     height: 132px;
 }
 
+/* faq */
 #faq dl {
     margin-bottom: 40px;
 }
@@ -274,6 +282,7 @@ header nav ul a:hover {
     margin-left: -40px;
 }
 
+/* footer */
 #footer {
     margin-top: 200px;
     background: #9e2c41;
@@ -295,10 +304,6 @@ header nav ul a:hover {
 
 
 @media screen and (max-width: 760px) {
-    .br_sp {
-        display: inline;
-    }
-    
     header nav ul {
         column-gap: 22px;
     }
@@ -315,7 +320,6 @@ header nav ul a:hover {
         box-sizing: border-box;
         width: 100%;
         padding: 5% 8%;
-
     }
 
     #mv h1 span {
@@ -327,6 +331,14 @@ header nav ul a:hover {
         max-width: 760px; 
         box-sizing: border-box;
         padding: 0 3%;
+    }
+
+    .content_title_type2 {
+        margin-top: 60px;
+    }
+
+    .br_sp {
+        display: inline;
     }
 
     #camp_bnr {
@@ -374,10 +386,6 @@ header nav ul a:hover {
 
     #voice .container .inner {
         width: 100%;
-    }
-
-    .content_title_type2 {
-        margin-top: 60px;
     }
 }
 
