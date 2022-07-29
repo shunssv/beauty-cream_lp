@@ -107,6 +107,16 @@ header nav ul img {
     text-align: center;
 }
 
+/* wrapperの位置を変える必要がある
+    main > section:nth-of-type(even) {
+    background: #9e2c41;
+    width: 100%;
+} */
+
+.br_pc {
+    display: inline;
+}
+
 .br_sp {
     display: none;
 }
@@ -153,48 +163,59 @@ header nav ul img {
 }
 
 /* product */
-#product {
+.bl_product {
     display: flex;
     margin-top: 100px;
+    margin: 100px 0 50px;
 }
 
-#product img {
-    height: fit-content;
+.bl_product_img {
+    object-fit: cover;
 }
 
-#product .product_detail {
+.bl_product_detail {
     margin-left: 40px;
 }
 
-#product .product_detail .product_name {
-    margin-bottom: 10px;
+.bl_product_detail .content_title {
+    margin-bottom: 30px;
+}
+
+.bl_product_detail .product_name {
+    font-size: 2.0rem;
+    margin-bottom: 1em;
     line-height: 1.5;
+}
+
+.bl_product_detail .product_name span {
+    font-weight: normal;
+    font-size: 1.6rem;
+    margin-left: 1em;
 }
 
 .tax_included {
     font-size: 1.2rem;
 }
 
-#product .product_detail .product_icon {
+.bl_product_detail .product_info {
     display: flex;
+    column-gap: 10px;
+    margin-bottom: 40px;
 }
 
-#product .product_detail .product_icon li {
+.bl_product_detail .product_icon {
     font-size: 1.2rem;
     border: solid #4e4e4e 1px;
-    padding: 8px 20px;
-    margin-right: 10px;
+    padding: 2px 15px;
 }
 
-
-
-#product .product_detail h2,ul,.product_txt {
-    margin-bottom: 30px;
+.bl_product_detail .product_txt {
+    margin-bottom: 1em;
 }
 
-#product_components p {
+.bl_product_components {
     border: dashed #4e4e4e 1px;
-    width: 700px;
+    max-width: 700px;
     margin: 30px auto 0;
     padding: 30px;
 }
@@ -337,6 +358,10 @@ header nav ul img {
         margin-top: 60px;
     }
 
+    .br_pc {
+        display: none;
+    }
+
     .br_sp {
         display: inline;
     }
@@ -349,23 +374,16 @@ header nav ul img {
         margin-top: 60px;
     }
 
-    #product {
+    /* product */
+    .bl_product {
         flex-direction: column;
-        margin-top: 60px;
     }
 
-    #product .product_detail {
-        margin: 25px;
+    .bl_product_detail {
+        margin: 20px 0 0;
     }
 
-    #product .product_detail h2 {
-        text-align: center;
-    }
-
-    #product_components p {
-        width: auto;
-    }
-
+    /* instruction */
     #instruction .three_steps {
         flex-direction: column;
         align-items: center;
