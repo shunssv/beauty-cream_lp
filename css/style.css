@@ -13,6 +13,10 @@ body {
     color: #4e4e4e;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 img {
     max-width: 100%;
     vertical-align: bottom;
@@ -97,6 +101,12 @@ header nav ul img {
     margin: 0 auto;
 }
 
+.with_bg {
+    background: #be6c7a47;
+    margin-top: 100px;
+    padding: 60px 0 30px;
+}
+
 [class^="content_title"] {
     font-size: 2.4rem;
     font-weight: bold;
@@ -107,11 +117,9 @@ header nav ul img {
     text-align: center;
 }
 
-/* wrapperの位置を変える必要がある
-    main > section:nth-of-type(even) {
-    background: #9e2c41;
-    width: 100%;
-} */
+.with_bg .content_title_type2 {
+    margin-top: 30px;
+}
 
 .br_pc {
     display: inline;
@@ -165,8 +173,10 @@ header nav ul img {
 /* product */
 .bl_product {
     display: flex;
-    margin-top: 100px;
     margin: 100px 0 50px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 4px;
 }
 
 .bl_product_img {
@@ -216,7 +226,7 @@ header nav ul img {
 .bl_product_components {
     border: dashed #4e4e4e 1px;
     max-width: 700px;
-    margin: 30px auto 0;
+    margin: 50px auto 100px;
     padding: 30px;
 }
 
@@ -233,6 +243,10 @@ header nav ul img {
 }
 
 /* voice */
+#voice {
+    max-width: 1200px;
+}
+
 #voice .container {
     display: flex;
     flex-wrap: wrap;
@@ -247,6 +261,8 @@ header nav ul img {
     margin-bottom: 40px;
     border: solid #be6c7a4d 1px;
     padding: 20px;
+    background: #fff;
+    border-radius: 4px;
 }
 
 #voice .container .inner p span {
