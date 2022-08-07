@@ -285,13 +285,17 @@ header nav ul img {
 
 /* faq */
 #faq dl {
+    position: relative;
     margin-bottom: 40px;
 }
 
 #faq dl dt {
     background: #be6c7ac4;
     color: #ffffff;
-    padding: 10px 10px 10px 50px;
+    padding: 10px 60px 10px 50px;
+    margin-bottom: 1em;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 #faq dl dd {
@@ -301,6 +305,7 @@ header nav ul img {
 #faq dl dt::before,dd::before {
     font-size: 2.4rem;
     margin-right: 10px;
+    line-height: 1;
 }
 
 #faq dl dt::before {
@@ -308,7 +313,17 @@ header nav ul img {
     font-weight: bold;
     display: inline-block;
     width: 25px;
-    margin-left: -40px;
+    margin-left: -40px
+}
+
+#faq dl dt::after {
+    content: "＋";
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    font-weight: bold;
+    display: inline-block;
+    width: 25px;
 }
 
 #faq dl dd::before {
