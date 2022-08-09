@@ -284,31 +284,32 @@ header nav ul img {
 }
 
 /* faq */
-#faq dl {
-    position: relative;
-    margin-bottom: 40px;
+#faq {
+    margin-bottom: 80px;
 }
 
-#faq dl dt {
+.bl_faq_accordion:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+.bl_faq_accordion dt {
+    position: relative;
     background: #be6c7ac4;
     color: #ffffff;
     padding: 10px 60px 10px 50px;
     margin-bottom: 1em;
     border-radius: 4px;
     cursor: pointer;
+    user-select: none;
 }
 
-#faq dl dd {
-    padding: 10px 10px 10px 50px;
-}
-
-#faq dl dt::before,dd::before {
+.bl_faq_accordion dt::before,dd::before {
     font-size: 2.4rem;
     margin-right: 10px;
     line-height: 1;
 }
 
-#faq dl dt::before {
+.bl_faq_accordion dt::before {
     content: "Q";
     font-weight: bold;
     display: inline-block;
@@ -316,22 +317,42 @@ header nav ul img {
     margin-left: -40px
 }
 
-#faq dl dt::after {
-    content: "＋";
+.bl_faq_accordion dt::after {
+    content: "+";
     position: absolute;
-    top: 10px;
-    right: 5px;
+    font-size: 2em;
+    top: -7px;
+    right: 10px;
     font-weight: bold;
     display: inline-block;
     width: 25px;
+    transition: transform .3s ease;
 }
 
-#faq dl dd::before {
+.bl_faq_accordion dt.active::after {
+    transform: rotate(45deg);
+}
+
+.bl_faq_accordion dd::before {
     content: "A";
     font-weight: bold;
     display: inline-block;
     width: 25px;
     margin-left: -40px;
+}
+
+.bl_faq_accordion > dd {
+    height: 0;
+    padding: 0 10px 0 50px;
+    opacity: 0;
+    transition: height .3s, padding .3s, opacity .3s;
+}
+
+.bl_faq_accordion > dd.appeared {
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    opacity: 1;
 }
 
 /* footer */
