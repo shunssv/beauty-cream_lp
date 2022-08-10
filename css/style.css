@@ -238,17 +238,26 @@ header nav ul img {
 }
 
 .three_steps_item {
-    position: relative;
     width: 31.2%;
-    margin-top: 15px;
 }
 
-.three_steps_item dt {
-    font-family: 'Dancing Script', 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+.three_steps_item_image_wrapper {
+    position: relative;
 }
+
+.three_steps_item_image_wrapper dt {
+    position: absolute;
+    font-family: 'Dancing Script', 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    font-size: 7.2rem;
+    color: rgba(106, 106, 106, 0.7);
+    bottom: -13px;
+    right: 0;
+}
+
 
 .three_steps_item .image_wrapper {
     height: 300px;
+    margin-bottom: 1em;
 }
 
 .three_steps_item img {
@@ -256,6 +265,7 @@ header nav ul img {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 0 0 3px #ccc;
 }
 
 /* voice */
@@ -455,15 +465,12 @@ header nav ul img {
     .three_steps {
         flex-direction: column;
         align-items: center;
+        row-gap: 3em;
     }
 
     .three_steps .three_steps_item {
         width: 100%;
-        max-width: 312px;
-    }
-
-    .three_steps .three_steps_item img {
-        width: 70%;
+        max-width: 320px;
     }
 
     #voice .container {
