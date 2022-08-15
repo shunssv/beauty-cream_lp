@@ -104,7 +104,7 @@ header nav ul img {
 .with_bg {
     background: #be6c7a47;
     margin-top: 100px;
-    padding: 60px 0 30px;
+    padding: 60px 0;
 }
 
 [class^="content_title"] {
@@ -113,6 +113,7 @@ header nav ul img {
 }
 
 .content_title_type2 {
+    font-size: 3.2rem;
     margin: 100px 0 50px;
     text-align: center;
 }
@@ -275,13 +276,12 @@ header nav ul img {
 .bl_voice_container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    gap: 30px;
 }
 
 .bl_voice_content {
     width: 48%;
     box-sizing: border-box;
-    margin-bottom: 40px;
     border: solid #be6c7a4d 1px;
     padding: 30px;
     background: #fff;
@@ -298,36 +298,42 @@ header nav ul img {
     font-size: 2.4rem;
     font-weight: bold;
     line-height: 1.5;
-    word-break: keep-all;
+    padding-left: 1.5em;
+    flex-grow: 1;
+    z-index: 1;
 }
 
 .bl_voice_content_flexbox p::before {
-    content: "|";
+    content: "\f10d";
+    display: inline-block;
+    font: var(--fa-font-solid);
+    opacity: var(--fa-primary-opacity, .6);
+    color: #ccc;
+    font-size: 2.5em;
+
     position: absolute;
+    top: -30px;
+    left: 0;
+    z-index: -1;
 }
 
 .bl_voice_content_flexbox img {
     width: 85px;
 }
 
-/* 保留
 .bl_voice_content_textbox {
-    background: #eed6da61;
-    padding: 1em;
-    border-radius: 4px;
-} */
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2em;
+}
 
 .bl_voice_content_textbox span {
     display: block;
     font-weight: bold;
     text-align: right;
 }
-
-.bl_voice_content_textbox,
-.bl_voice_content_textbox span {
-    margin-top: 1em;
-}
-
 
 /* faq */
 #faq {
@@ -479,6 +485,15 @@ header nav ul img {
 
     .bl_product_detail {
         margin: 20px 0 0;
+    }
+
+    /* voice */
+    .bl_voice_content {
+        padding: 35px 20px;
+    }
+    
+    .bl_voice_content_flexbox p {
+        padding-left: 0.5em;
     }
 
     /* instruction */
