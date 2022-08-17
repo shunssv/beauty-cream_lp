@@ -107,6 +107,10 @@ header nav ul img {
     padding: 60px 0;
 }
 
+.with_bg.mt0 {
+    margin-top: 0;
+}
+
 [class^="content_title"] {
     font-size: 2.4rem;
     font-weight: bold;
@@ -149,25 +153,28 @@ header nav ul img {
 }
 
 /* banner */
-#camp_bnr {
-    margin-top: 100px;
-}
 
 
 /* concept text */
-#concept_txt p {
+
+.bl_concept {
+    background: url(../images/concept_bg.png) top center / cover no-repeat;
+    padding: 60px 0 100px;
+}
+
+.bl_concept p {
     font-size: 1.6rem;
     text-align: center;
     margin-top: 100px;
     line-height: 2;   
 }
 
-#concept_txt .product_pr {
+p.bl_concept_text_pr {
     font-size: 2.4rem;
     line-height: 1.5;
 }
 
-#concept_txt .product_pr .number_pr {
+.bl_concept_text_pr .number_pr {
     font-size: 4.0rem;
 }
 
@@ -474,8 +481,9 @@ header nav ul img {
         margin-top: 60px;
     }
 
-    #concept_txt p {
+    .bl_concept p {
         margin-top: 60px;
+        padding: 0 4%;
     }
 
     /* product */
