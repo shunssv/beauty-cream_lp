@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 {
     // アコーディオン
@@ -10,4 +10,18 @@
             q.classList.toggle('active');
         });
     });
+}
+{
+    $(function () {
+        var headH = $("header").outerHeight(); 
+        $("a[href^='#']").on({
+            "click": function () {
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href === "" ? "html" : href);
+                var position;
+                position = target.offset().top - headH; 
+                return false;
+            }
+        });
+      });
 }
