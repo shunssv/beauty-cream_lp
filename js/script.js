@@ -24,3 +24,26 @@
         });
     });
 }
+{
+    // ハンバーガーメニュー
+    const menuIcon = document.getElementById('gnav_sp_icon');
+    const lines = menuIcon.children;
+    const menuWindow = document.getElementById('gnav_sp');
+
+    console.log(menuIcon.children);
+
+
+
+    // ウィンドウ表示
+    menuIcon.addEventListener('click', () => {
+        // lines.forEach(line => {
+        //     line.classList.toggle('active');
+        // });
+        menuWindow.classList.toggle('appeared');
+    });
+
+    menuWindow.addEventListener('click', () => {
+        menuWindow.classList.remove('appeared');
+        menuIcon.classList.remove('disappeared');
+    });
+}

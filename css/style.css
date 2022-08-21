@@ -31,6 +31,10 @@ a:hover {
 }
 
 /* header */
+#gnav_sp_icon {
+    display: none;
+}
+
 header nav {
     position: fixed;
     top: 0;
@@ -433,12 +437,82 @@ p.bl_concept_text_pr {
 
 
 @media screen and (max-width: 760px) {
-    header nav ul {
-        column-gap: 22px;
+    #gnav_sp_icon {
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 3;
+        cursor: pointer;
     }
 
-    header nav ul img {
-        margin-right: 22px;
+    /* #gnav_sp_icon.disappeared {
+        opacity: 0;
+        pointer-events: none;
+    } */
+
+    #gnav_sp_icon > span {
+        position: absolute;
+        border: solid 1px #4e4e4e;
+        width: 30px;
+        right: 40px;
+    }
+
+    .icon_top {
+        top: 30px;
+    }
+    .icon_top.active {
+        transform: rotate(45deg);
+        transform-origin: left;
+    }
+
+    .icon_middle {
+        top: 40px;
+    }
+    .icon_middle.active {
+        opacity: 0;
+    }
+
+    .icon_bottom {
+        top: 50px;
+    }
+    .icon_bottom.active {
+        transform: rotate(-45deg);
+        transform-origin: left;
+    }
+    
+    #gnav_sp {
+        position: fixed;
+        width: 100%;
+        background: #fff;
+        padding: 15%;
+        z-index: 2;
+        transform: translateX(100vw);
+    }
+
+    #gnav_sp.appeared {
+        animation: slide 1s forwards;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(100vw);
+        } 
+        100% {
+            transform: translateX(0);
+        } 
+    }
+
+    #gnav_sp ul {
+        display: block;
+    }
+
+    #gnav_sp li:not(:last-child) {
+        margin-bottom: 1em;
+    }
+
+    #mv {
+        padding-top: 100%;
     }
 
     #mv h1 {
