@@ -27,23 +27,25 @@
 {
     // ハンバーガーメニュー
     const menuIcon = document.getElementById('gnav_sp_icon');
-    const lines = menuIcon.children;
+    const lines = document.querySelectorAll('#gnav_sp_icon > span');
     const menuWindow = document.getElementById('gnav_sp');
-
-    console.log(menuIcon.children);
-
-
-
-    // ウィンドウ表示
-    menuIcon.addEventListener('click', () => {
-        // lines.forEach(line => {
-        //     line.classList.toggle('active');
-        // });
+    const menuLinks = document.querySelectorAll('#gnav_sp li > a');
+    
+    function menu() {
+        lines.forEach(line => {
+            console.log(line);
+            line.classList.toggle('active');
+        });
         menuWindow.classList.toggle('appeared');
+    }
+
+    menuIcon.addEventListener('click', () => {
+        menu();
     });
 
-    menuWindow.addEventListener('click', () => {
-        menuWindow.classList.remove('appeared');
-        menuIcon.classList.remove('disappeared');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menu();
+        });
     });
 }
