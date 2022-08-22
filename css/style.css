@@ -24,6 +24,7 @@ img {
 
 a {
     transition: opacity .5s;
+    -webkit-tap-highlight-color: transparent;
 }
 
 a:hover {
@@ -49,7 +50,7 @@ header nav ul {
 
 header nav ul a {
     font-size: 2.0rem;
-    display: block;
+    display: inline-block;
     color: #4e4e4e;
     line-height: 60px;
 }
@@ -361,6 +362,7 @@ p.bl_concept_text_pr {
     border-radius: 4px;
     cursor: pointer;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .bl_faq_accordion dt::before,dd::before {
@@ -444,30 +446,28 @@ p.bl_concept_text_pr {
         top: 0;
         z-index: 3;
         cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
     }
-
-    /* #gnav_sp_icon.disappeared {
-        opacity: 0;
-        pointer-events: none;
-    } */
 
     #gnav_sp_icon > span {
         position: absolute;
         border: solid 1px #4e4e4e;
         width: 30px;
         right: 40px;
+        transform-origin: left;
     }
 
     .icon_top {
         top: 30px;
+        transition: transform .8s;
     }
     .icon_top.active {
         transform: rotate(45deg);
-        transform-origin: left;
     }
 
     .icon_middle {
         top: 40px;
+        transition: opacity .8s;
     }
     .icon_middle.active {
         opacity: 0;
@@ -475,10 +475,10 @@ p.bl_concept_text_pr {
 
     .icon_bottom {
         top: 50px;
+        transition: transform .8s;
     }
     .icon_bottom.active {
-        transform: rotate(-45deg);
-        transform-origin: left;
+        transform: rotate(-45deg) translateX(-1px);
     }
     
     #gnav_sp {
@@ -488,19 +488,11 @@ p.bl_concept_text_pr {
         padding: 15%;
         z-index: 2;
         transform: translateX(100vw);
+        transition: transform .8s;
     }
 
     #gnav_sp.appeared {
-        animation: slide 1s forwards;
-    }
-
-    @keyframes slide {
-        0% {
-            transform: translateX(100vw);
-        } 
-        100% {
-            transform: translateX(0);
-        } 
+        transform: translateX(0);
     }
 
     #gnav_sp ul {
