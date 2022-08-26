@@ -174,7 +174,11 @@ header nav ul img {
 }
 
 /* banner */
-
+.bl_concept_bnr {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
 /* concept text */
 
@@ -566,8 +570,8 @@ p.bl_concept_text_pr {
         display: inline;
     }
 
-    #camp_bnr {
-        margin-top: 60px;
+    .bl_concept_bnr {
+        padding: 0 4%;
     }
 
     .bl_concept p {
