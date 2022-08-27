@@ -1,18 +1,7 @@
 'use strict';
 
 {
-    // アコーディオン
-    const qs = document.querySelectorAll('.bl_faq_accordion > dt');
-
-    qs.forEach(q => {
-        q.addEventListener('click', () => {
-            q.nextElementSibling.classList.toggle('appeared');
-            q.classList.toggle('active');
-        });
-    });
-}
-{
-    // スムーススクロール・URLに#を付与させない
+    // smooth scrolling without #
     $(document).ready(function () {
         $("a[href^='#']").click(function () {
             var speed = 600;
@@ -25,7 +14,7 @@
     });
 }
 {
-    // ハンバーガーメニュー
+    // hamburger menu
     const menuIcon = document.getElementById('gnav_sp_icon');
     const lines = document.querySelectorAll('#gnav_sp_icon > span');
     const menuWindow = document.getElementById('gnav_sp');
@@ -38,14 +27,38 @@
         });
         menuWindow.classList.toggle('appeared');
     }
-
+    
     menuIcon.addEventListener('click', () => {
         menu();
     });
-
+    
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {
             menu();
+        });
+    });
+}
+{
+    // accordion
+    const qs = document.querySelectorAll('.bl_faq_accordion > dt');
+
+    qs.forEach(q => {
+        q.addEventListener('click', () => {
+            q.nextElementSibling.classList.toggle('appeared');
+            q.classList.toggle('active');
+        });
+    });
+}
+{
+    // moving to top
+    $("#toPagetop").hide(); 
+    $(function () {
+        $(window).scroll(function () {
+        if ($(this).scrollTop() > 400) {
+                $('#toPagetop').fadeIn();
+        } else {
+                $('#toPagetop').fadeOut();
+        }
         });
     });
 }
