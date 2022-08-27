@@ -118,7 +118,7 @@ header nav ul img {
     font-size: 1.8rem;
     font-weight: normal;
     line-height: 1;
-    background-color: #be6c7ac4;
+    background-color: rgba(190, 108, 122, 0.769);
     padding: .5em 2em;
     border-radius: 25px;
 }
@@ -383,7 +383,7 @@ p.bl_concept_text_pr {
 
 .bl_faq_accordion dt {
     position: relative;
-    background: #be6c7ac4;
+    background: rgba(190, 108, 122, 0.769);
     color: #ffffff;
     padding: 10px 60px 10px 50px;
     margin-bottom: 1em;
@@ -464,7 +464,28 @@ p.bl_concept_text_pr {
     margin-top: 100px;
 }
 
+#toPagetop {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(51, 51, 51, .8);
+    border-radius: 50%;
+    text-align: center;
+    position: fixed;
+    bottom: 5vh;
+    right: 2vw;
+    z-index: 3;
+}
 
+#toPagetop a {
+    display: block;
+    height: 100%;
+    line-height: 50px;
+}
+
+#toPagetop i {
+    color: #fff;
+    font-size: 2.4rem;
+}
 
 @media screen and (max-width: 760px) {
     #gnav_sp_icon {
