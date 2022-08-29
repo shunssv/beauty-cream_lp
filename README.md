@@ -16,8 +16,8 @@
 - HTMLとCSS
 - Webデザイン全般  
 ※ブラッシュアップ前  
-  beauty-cream_lp/beauty-cream_pc.png  
-  beauty-cream_lp/beauty-cream_sp.png  
+  [beauty-cream_lp/beauty-cream_pc.png](https://shunssv.github.io/beauty-cream_lp/beauty-cream_pc.png)  
+  [beauty-cream_lp/beauty-cream_sp.png](https://shunssv.github.io/beauty-cream_lp/beauty-cream_sp.png)
 
 ## 苦労した点
 ---
