@@ -572,7 +572,6 @@ p.bl_concept_text_pr {
     }
 
     .bl_mv_text {
-        max-width: 400px;
         top: 55%;
         left: 50%;
         transform: translateX(-50%);
